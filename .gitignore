@@ -1,0 +1,25 @@
+# Compiled object files
+*.o
+
+# Executables
+*.exe
+*.out
+
+# Libraries
+*.a
+*.so
+
+# Build directories
+build/
+bin/
+
+# Dependency directories
+deps/
+
+# IDE files
+.vscode/
+.idea/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
