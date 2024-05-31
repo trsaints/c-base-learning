@@ -41,9 +41,8 @@ int main()
     if (scan_status == 0)
         return 1;
 
-    int max_operand = integer_set - 1,
-        modulo_headers[max_operand],
-        modulo_results[max_operand][max_operand];
+    int modulo_headers[integer_set],
+        modulo_results[integer_set][integer_set];
 
     for (int i = 0; i < integer_set; i++)
         modulo_headers[i] = i;
@@ -75,10 +74,20 @@ int main()
         break;
     }
 
-    printf("%s |", &option_operand);
+    printf(" %s |", &option_operand);
 
     for (int i = 0; i < integer_set; i++)
-        printf(" %d ", modulo_headers[i]);
+        printf(" %2d |", modulo_headers[i]);
 
     printf("\n");
+
+    for (int i = 0; i < integer_set; i++)
+    {
+        printf("%2d |", modulo_headers[i]);
+
+        for (int j = 0; j < integer_set; j++)
+            printf(" %2d |", modulo_results[i][j]);
+
+        printf("\n");
+    }
 }
