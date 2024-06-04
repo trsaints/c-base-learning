@@ -12,8 +12,8 @@ int *expand_to_base_b(int n, int b)
 
     while (q != 0)
     {
-        results[k] = q % b;
-        q /= b;
+        results[k] = q % b,
+        q /= b,
         ++k;
     }
 
